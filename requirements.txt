@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+flask_sqlalchemy
+Flask-JWT-Extended
+flasgger
+requests 
+beautifulsoup4 
+Flask-HTTPAuth

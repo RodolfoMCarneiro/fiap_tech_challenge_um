@@ -1,0 +1,37 @@
+Endpoint para obter detalhes de um livro específico.
+---
+tags:
+  - category
+responses:
+  200:
+    description: "Detalhes do livro retornados com sucesso"
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        titulo:
+          type: string
+          example: "The Great Gatsby"
+        categoria:
+          type: string
+          example: "Fiction"
+        imagem:
+          type: string
+          example: "https://books.toscrape.com/media/cache/xx.jpg"
+        disponibilidade:
+          type: boolean
+          example: true
+        qt_disponivel:
+          type: integer
+          example: 5
+        preco:
+          type: number
+          format: float
+          example: 19.99
+        rating:
+          type: integer
+          example: 4
+  404:
+    description: "Livro não encontrado"
