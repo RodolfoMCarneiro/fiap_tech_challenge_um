@@ -1,0 +1,15 @@
+Endpoint para realizar scrape e criar um backup em csv no ambiente.
+---
+tags:
+  - Scraper
+responses:
+  201:
+    description: "Scrape realizado com sucesso"
+    schema:
+      type: string
+      example: "Scrape realizado com sucesso"
+  500:
+    description: "Falha ao realizar scrape"
+    schema:
+      type: string
+      example: "Falha ao realizar scrape"

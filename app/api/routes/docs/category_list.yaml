@@ -1,10 +1,10 @@
-Endpoint para obter detalhes de um livro específico.
+Endpoint para obter lista de categorias.
 ---
 tags:
   - category
 responses:
   200:
-    description: "Detalhes do livro retornados com sucesso"
+    description: "Lista de categorias retornada com sucesso"
     schema:
       type: array
       items:  

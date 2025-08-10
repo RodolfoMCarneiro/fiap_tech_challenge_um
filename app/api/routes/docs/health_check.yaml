@@ -1,0 +1,27 @@
+Endpoint para realizar health check da aplicação.
+---
+tags:
+  - Health Check
+responses:
+  200:
+    description: "Health check realizado com sucesso"
+    schema:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "ok"
+        database:
+          type: string
+          example: "Conexão com database ativa"
+  500:
+    description: "Falha ao realizar health check"
+    schema:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "ok"
+        database:
+          type: string
+          example: "Falha na conexão ao database"

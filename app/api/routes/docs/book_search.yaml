@@ -1,0 +1,50 @@
+Endpoint para obter detalhes de livros considerando título e/ou categoria.
+---
+tags:
+  - books
+parameters:
+  - in: query
+    name: title
+    type: string
+    required: false
+    description: "Título do livro para busca parcial"
+  - in: query
+    name: category
+    type: string
+    required: false
+    description: "Categoria do livro para busca"
+responses:
+  200:
+    description: "Detalhes do livro retornados com sucesso"
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+            example: 1
+          titulo:
+            type: string
+            example: "The Great Gatsby"
+          categoria:
+            type: string
+            example: "Fiction"
+          imagem:
+            type: string
+            example: "https://books.toscrape.com/media/cache/xx.jpg"
+          disponibilidade:
+            type: boolean
+            example: true
+          qt_disponivel:
+            type: integer
+            example: 5
+          preco:
+            type: number
+            format: float
+            example: 19.99
+          rating:
+            type: integer
+            example: 4
+  404:
+    description: "Nenhum livro não encontrado nas condições informadas"
