@@ -22,10 +22,8 @@ def get_book_details(book_grid_information, detail_url):
 
     category_soup = details_soup.find("ul", {"class": "breadcrumb"})
     category = category_soup.findAll("li")[2].text.strip()
-    print('category: ', category)
     book_image = urljoin(detail_url, details_soup.find("img")['src'])
     availability = details_soup.find("p", {"class": "instock availability"}).text.strip()
-    print('availability_number: ', availability)
     if 'In stock' in availability:
         availability_digits = re.findall(r'\d+', availability)
         availability_number = int(availability_digits[0])
@@ -53,19 +51,13 @@ def return_scraped_books():
         bookshelf = page_soup.findAll("li", {"class": "col-xs-6 col-sm-4 col-md-3 col-lg-3"})
 
         for book in bookshelf:
-            # print(book)
-            print('title: ', book.h3.a['title'].strip())
-            print('book_page_details: ', urljoin(url, book.h3.a['href']))
-            print('price: ', Decimal(book.find("p", {"class":"price_color"}).text.strip().replace("£", "")))
-            print('rating: ', stars_dict[book.find("p", {"class":"star-rating"}).get("class")[1]])
             books.append(get_book_details(book, urljoin(next_page_url, book.h3.a['href'])))
 
         next_page_info = page_soup.find("li", {"class": "next"})
         if next_page_info:
-            # next_page_url = urljoin(next_page_url, next_page_info.a['href'])
-            # print('next_page_url: ', next_page_url)
-            next_page_url= None
+            next_page_url = urljoin(next_page_url, next_page_info.a['href'])
         else:
             next_page_url = None
         
+    print(books)
     return books
