@@ -9,6 +9,7 @@ from app.api.routes.book_detail import init_book_detail_route
 from app.api.routes.book_search import init_book_search_route
 from app.api.routes.category_list import init_category_list_route
 from app.api.routes.health_check import init_health_check_route
+from app.api.routes.price_range import init_book_price_range_route
 
 def create_app():
     app = Flask(__name__)
@@ -22,6 +23,7 @@ def create_app():
     init_book_search_route(app)
     init_category_list_route(app)
     init_health_check_route(app)
+    init_book_price_range_route(app)
 
     
     return app
