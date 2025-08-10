@@ -1,4 +1,4 @@
-Endpoint para obter lista de livros na base.
+Endpoint para obter lista dos 20 livros com melhor avaliação.
 ---
 tags:
   - books

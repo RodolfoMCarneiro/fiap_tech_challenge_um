@@ -2,11 +2,11 @@ from flask import Flask, jsonify
 from app.infra.database.db_config import Books
 from flasgger import swag_from
 
-def init_book_list_route(app):
-    @app.route('/api/v1/books', methods=['GET'])
-    @swag_from('docs/book_list.yaml')
-    def book_list():
-        query = Books.query.all()
+def init_book_top_rated_route(app):
+    @app.route('/api/v1/books/top-rated', methods=['GET'])
+    @swag_from('docs/book_top_rated.yaml')
+    def book_top_rated():
+        query = Books.query.order_by(Books.rating.desc()).limit(20).all()
         return jsonify([
             {
                 "id": b.id,

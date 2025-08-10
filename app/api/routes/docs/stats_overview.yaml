@@ -1,0 +1,29 @@
+Retorna preço médio, quantidade total de livros e distribuição por rating.
+---
+tags:
+  - Statistics
+responses:
+  200:
+    description: "Estatísticas retornadas com sucesso"
+    schema:
+      type: object
+      properties:
+        preco_medio:
+          type: number
+          format: float
+          example: 10.01
+        total_livros:
+          type: integer
+          example: 1
+        livros_por_rating:
+          type: object
+          additionalProperties:
+            type: integer
+          example:
+            "1": 1
+            "2": 2
+            "3": 3
+            "4": 4
+            "5": 5
+  500:
+    description: "Falha ao obter estatísticas"
