@@ -4,7 +4,7 @@ from flasgger import swag_from
 
 def init_book_detail_route(app):
     @app.route('/api/v1/books/<int:book_id>', methods=['GET'])
-    @swag_from('docs\\book_detail.yaml')
+    @swag_from('docs/book_detail.yaml')
     def book_detail(book_id):
         query = Books.query.filter(Books.id == book_id).all()
         return jsonify([
