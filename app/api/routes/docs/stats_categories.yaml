@@ -1,0 +1,32 @@
+Retorna preço máximo, preço mínimo, média de preço e quantidade de livros por categoria.
+---
+tags:
+  - Statistics
+responses:
+  200:
+    description: "Estatísticas retornadas com sucesso"
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          categoria:
+            type: string
+            example: "Fiction"
+          preco_maximo:
+            type: number
+            format: float
+            example: 10.01
+          preco_minimo:
+            type: number
+            format: float
+            example: 10.01
+          preco_medio:
+            type: number
+            format: float
+            example: 10.01
+          quantidade_livros:
+            type: integer
+            example: 1
+  500:
+    description: "Falha ao obter estatísticas"
