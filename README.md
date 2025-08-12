@@ -5,11 +5,13 @@
 ## Sumário
 1. [Introdução](#introdução)
 2. [Requisitos do tech challenge](#requisitos-do-tech-challenge)
-3. [Rotas](#rotas)
-4. [Documentação de rotas](#documentação-de-rotas)
-5. [Arquitetura](#arquitetura)
+3. [Instalação](#instalação)
+4. [Rotas](#rotas)
+5. [Documentação de rotas](#documentação-de-rotas)
+6. [Arquitetura](#arquitetura)
     - [Pipeline de Ingestão](#pipeline-de-ingestão)
     - [Organização do projeto](#organização-do-projeto)
+
 
 ## Introdução
 O projeto apresentado nesse repositório trata de um webscraping do site [books.toscrape.com](https://books.toscrape.com). Basicamente o projeto realiza uma raspagem e obtém as informações dos livros presentes no site. Uma vez realizada a raspagem, os dados são armazenados em um banco de dados para o consumo via API.
@@ -20,6 +22,22 @@ O projeto apresentado nesse repositório trata de um webscraping do site [books.
 - API REST para consumo das informações.
 - Documentação utilizando Swagger.
 - Deploy em ambiente produtivo.
+
+## Instalação
+Para realizar a instalação e execução do projeto, siga os seguintes passos:
+1. Realize um clone do projeto
+2. Acesse o diretório onde o repositório foi clonado e crie um ambiente virtual:
+```
+# Criar ambiente virtual:
+python -m venv venv
+
+# Ativar ambiente:
+source venv/Scripts/activate
+```
+3. Realize a instalação das dependências:
+```
+pip install -r requirements.txt
+```
 
 ## Rotas
 - GET /api/v1/books: Lista todos os livros disponíveis na base de dados.
