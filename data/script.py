@@ -59,5 +59,4 @@ def return_scraped_books():
         else:
             next_page_url = None
         
-    print(books)
     return books
