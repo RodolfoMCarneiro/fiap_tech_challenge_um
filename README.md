@@ -52,14 +52,24 @@ flowchart LR
 │   │   	├ book_detail.py
 │	│		├ books_list.py
 │	│		├ book_search.py
+│	│		├ book_top_rated.py
 │	│		├ category_list.py
 │	│		├ health_check.py
+│	│		├ price_range.py
+│	│		├ scraper.py
+│	│		├ stats_category.py
+│	│		├ stats_overview.py
 │	│		└── docs
 │	│			├── books_detail.yaml
 │	│			├── books_list.yaml
 │	│			├── book_search.yaml
+│	│			├── book_top_rated.yaml
 │	│			├── category_list.yaml
-│	│			└── health_check.yaml
+│	│			├── health_check.yaml
+│	│			├── price_range.yaml
+│	│			├── scraper.yaml
+│	│			├── stats_category.yaml
+│	│			└── stats_overview.yaml
 │   ├── config
 │   │   └── settings.py
 │   └── infra
