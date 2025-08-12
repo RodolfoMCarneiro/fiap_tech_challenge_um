@@ -28,6 +28,11 @@ O projeto apresentado nesse repositório trata de um webscraping do site [books.
 - GET /api/v1/categories: Lista todas as categorias de livros disponíveis.
 - GET /api/v1/health: Verifica status da API e conectividade com os dados.
 - GET /api/v1/books/price-range?min={min}&max={max}: Filtra livros dentro de uma faixa de preço específica.
+- GET /api/v1/books/top-rated: Lista os livros com melhor avaliação (rating mais alto).
+- GET /api/v1/stats/categories: Estatísticas detalhadas por categoria (quantidade de livros, preços por categoria).
+- GET /api/v1/stats/overview: Estatísticas gerais da coleção (total de livros, preço médio, distribuição de ratings).
+- POST /scrape_to_database: Realiza processo de webscraping e armazena em banco de dados.
+- POST /scrape_to_csv: Realiza processo de webscraping e armazena em arquivo csv.
 
 ## Documentação de rotas
 ### Uso local
