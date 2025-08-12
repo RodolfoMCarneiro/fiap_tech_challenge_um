@@ -2,6 +2,12 @@
 ---
 tags:
   - books
+parameters:
+  - in: path
+    name: book_id
+    type: integer
+    required: false
+    description: "Id do livro para o qual os detalhes são solicitados"
 responses:
   200:
     description: "Detalhes do livro retornados com sucesso"
